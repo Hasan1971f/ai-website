@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+    META & SEO
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <!-- Ensures correct scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: Descriptive page title -->
+  <title>Hasan Digital Solutions | Professional Business Services</title>
+
+  <!-- SEO: Page description (shown in Google search results) -->
+  <meta name="description" content="Hasan Digital Solutions provides expert consulting, digital marketing, web development, and business strategy services to help your business grow and thrive." />
+
+  <!-- SEO: Keywords (less important nowadays, but good practice) -->
+  <meta name="keywords" content="business services, consulting, digital marketing, web development, branding, small business" />
+
+  <!-- Open Graph: Controls preview when link is shared on social media -->
+  <meta property="og:title"       content="Hasan Digital Solutions | Professional Business Services" />
+  <meta property="og:description" content="Expert business consulting, digital marketing, and development services." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon (emoji as SVG — no extra files needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Our custom stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+    NAVBAR — Fixed at top of page
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- Logo — clicking takes you home -->
+        <a href="#hero" class="nav-logo" aria-label="Hasan Digital home">
+           Hasan<span> Digital</span>
+        </a>
+
+        <!-- Desktop navigation links (hidden on mobile) -->
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="#hero"         >Home</a></li>
+          <li><a href="#services"     >Services</a></li>
+          <li><a href="#about"        >About</a></li>
+          <li><a href="#testimonials" >Testimonials</a></li>
+          <li><a href="#contact"      >Contact</a></li>
+        </ul>
+
+        <!-- Right side: CTA button + hamburger -->
+        <div style="display:flex; align-items:center; gap:16px;">
+          <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+
+          <!-- Hamburger button — only visible on mobile -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+    HERO SECTION — First thing visitors see
+  ============================================================ -->
+  <section id="hero" aria-label="Hero section">
+
+    <!-- Animated background effects (CSS-only, no images) -->
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-layout">
+
+        <!-- Left: Text content -->
+        <div class="hero-content">
+
+          <!-- Small animated badge -->
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Trusted by 500+ Businesses Worldwide
+          </div>
+
+          <!-- Main headline (h1 — only one per page for SEO) -->
+          <h1 class="hero-headline">
+            We Help Your Business
+            <span class="gradient-text">Grow Smarter</span>
+          </h1>
+
+          <!-- Supporting description -->
+          <p class="hero-description">
+            Hasan Digital Solutions delivers expert consulting, digital marketing,
+            and technology services tailored to small and medium businesses.
+            Let's turn your vision into measurable results.
+          </p>
+
+          <!-- Call-to-action buttons -->
+          <div class="hero-actions">
+            <a href="#services"   id="explore-services-btn"    class="btn btn-primary">
+              ✦ Explore Services
+            </a>
+            <a href="#contact"    id="hero-contact-btn"        class="btn btn-outline">
+              Contact Us →
+            </a>
+          </div>
+
+          <!-- Stats row — numbers animate on scroll via JS -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">
+                <!-- data-target tells JS what number to count up to -->
+                <span data-target="500" data-suffix="+">0+</span>
+              </div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">
+                <span data-target="98" data-suffix="%">0%</span>
+              </div>
+              <div class="stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">
+                <span data-target="12" data-suffix=" yrs">0 yrs</span>
+              </div>
+              <div class="stat-label">Experience</div>
+            </div>
+          </div>
+
+        </div><!-- /.hero-content -->
+
+        <!-- Right: Decorative analytics card -->
+        <div class="hero-visual">
+          <div class="hero-card">
+
+            <!-- macOS-style traffic light dots -->
+            <div class="card-header">
+              <span class="card-dot"></span>
+              <span class="card-dot"></span>
+              <span class="card-dot"></span>
+              <span class="card-title">Business Dashboard</span>
+            </div>
+
+            <!-- Main metric -->
+            <div class="card-metric">
+              <div class="metric-label">Monthly Revenue</div>
+              <div class="metric-value">$84,200</div>
+            </div>
+
+            <!-- Mini bar chart — heights set by JS -->
+            <div class="mini-bars">
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+            </div>
+
+            <!-- Footer row inside card -->
+            <div class="card-footer-row">
+              <span style="font-size:0.8rem; color:var(--text-muted);">vs last month</span>
+              <span class="badge-up">↑ 23.5%</span>
+            </div>
+
+          </div><!-- /.hero-card -->
+        </div><!-- /.hero-visual -->
+
+      </div><!-- /.hero-layout -->
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+    SERVICES SECTION
+  ============================================================ -->
+  <section id="services" aria-label="Our services">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="services-header fade-in">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Services Built for <span class="gradient-text">Real Results</span></h2>
+        <p class="section-subtitle">
+          We offer a comprehensive range of business solutions designed to help
+          you scale efficiently and outpace the competition.
+        </p>
+      </div>
+
+      <!-- 6-card services grid -->
+      <div class="services-grid">
+
+        <!-- Service Card 1: Consulting -->
+        <div class="service-card fade-in">
+          <div class="service-icon icon-purple">🎯</div>
+          <h3 class="service-title">Business Consulting</h3>
+          <p class="service-desc">
+            Strategic planning, market analysis, and operational efficiency
+            improvements tailored to your unique business challenges.
+          </p>
+          <a href="#contact" class="service-link">Get started →</a>
+        </div>
+
+        <!-- Service Card 2: Digital Marketing -->
+        <div class="service-card fade-in">
+          <div class="service-icon icon-teal">📈</div>
+          <h3 class="service-title">Digital Marketing</h3>
+          <p class="service-desc">
+            SEO, PPC, social media management, and content marketing strategies
+            that drive traffic and convert visitors into loyal customers.
+          </p>
+          <a href="#contact" class="service-link">Get started →</a>
+        </div>
+
+        <!-- Service Card 3: Web Development -->
+        <div class="service-card fade-in">
+          <div class="service-icon icon-pink">💻</div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">
+            Custom websites and web applications built with modern technologies
+            — fast, secure, accessible, and optimized for conversions.
+          </p>
+          <a href="#contact" class="service-link">Get started →</a>
+        </div>
+
+        <!-- Service Card 4: Branding -->
+        <div class="service-card fade-in">
+          <div class="service-icon icon-orange">🎨</div>
+          <h3 class="service-title">Brand Identity</h3>
+          <p class="service-desc">
+            Logo design, brand guidelines, and visual identity systems that make
+            a lasting impression and build customer trust and recognition.
+          </p>
+          <a href="#contact" class="service-link">Get started →</a>
+        </div>
+
+        <!-- Service Card 5: Analytics -->
+        <div class="service-card fade-in">
+          <div class="service-icon icon-blue">📊</div>
+          <h3 class="service-title">Data & Analytics</h3>
+          <p class="service-desc">
+            Turn your raw business data into actionable insights with custom
+            dashboards, reports, and data-driven decision frameworks.
+          </p>
+          <a href="#contact" class="service-link">Get started →</a>
+        </div>
+
+        <!-- Service Card 6: Support -->
+        <div class="service-card fade-in">
+          <div class="service-icon icon-green">🛡️</div>
+          <h3 class="service-title">Ongoing Support</h3>
+          <p class="service-desc">
+            Dedicated account management and 24/7 technical support to ensure
+            your operations run smoothly without interruptions.
+          </p>
+          <a href="#contact" class="service-link">Get started →</a>
+        </div>
+
+      </div><!-- /.services-grid -->
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+    ABOUT SECTION
+  ============================================================ -->
+  <section id="about" aria-label="About us">
+    <div class="container">
+      <div class="about-layout">
+
+        <!-- Left: Text content -->
+        <div class="about-text">
+          <span class="section-tag fade-in">Who We Are</span>
+          <h2 class="section-title fade-in">
+            A Team Passionate About Your <span class="gradient-text">Success</span>
+          </h2>
+          <p class="section-subtitle fade-in">
+            Founded in 2012, Hasan Digital Solutions has helped hundreds of businesses
+            across diverse industries achieve sustainable growth through smarter
+            strategy and modern technology.
+          </p>
+
+          <!-- Feature checklist -->
+          <div class="about-features">
+
+            <div class="feature-item fade-in">
+              <div class="feature-check">✓</div>
+              <div class="feature-text">
+                <strong>Certified Experts</strong>
+                <span>Our team holds industry certifications from Google, Meta, and HubSpot.</span>
+              </div>
+            </div>
+
+            <div class="feature-item fade-in">
+              <div class="feature-check">✓</div>
+              <div class="feature-text">
+                <strong>Tailored Solutions</strong>
+                <span>No cookie-cutter plans — every strategy is built from scratch for you.</span>
+              </div>
+            </div>
+
+            <div class="feature-item fade-in">
+              <div class="feature-check">✓</div>
+              <div class="feature-text">
+                <strong>Transparent Pricing</strong>
+                <span>Clear, upfront pricing with no hidden fees or surprise charges.</span>
+              </div>
+            </div>
+
+            <div class="feature-item fade-in">
+              <div class="feature-check">✓</div>
+              <div class="feature-text">
+                <strong>Proven Results</strong>
+                <span>500+ success stories across retail, tech, healthcare, and more.</span>
+              </div>
+            </div>
+
+          </div><!-- /.about-features -->
+
+          <!-- CTA below feature list -->
+          <div style="margin-top: 36px;" class="fade-in">
+            <a href="#contact" id="about-cta-btn" class="btn btn-primary">Work With Us</a>
+          </div>
+        </div><!-- /.about-text -->
+
+        <!-- Right: Decorative visual cards -->
+        <div class="about-visual fade-in">
+
+          <!-- "Years" badge on the visual -->
+          <div class="years-badge">
+            <span class="num">12</span>
+            <span class="txt">Years</span>
+          </div>
+
+          <!-- Main large card -->
+          <div class="about-img-card card-main">
+            <div class="about-icon-big">🚀</div>
+            <div class="about-card-label">Helping businesses launch,<br>scale, and dominate their market.</div>
+          </div>
+
+          <!-- Smaller accent card -->
+          <div class="about-img-card card-small">
+            <div style="font-size:2rem;">🏆</div>
+            <div class="about-card-label-white">Award Winning</div>
+            <div class="about-card-sub">Top Agency 2024</div>
+          </div>
+
+        </div><!-- /.about-visual -->
+
+      </div><!-- /.about-layout -->
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+    TESTIMONIALS SECTION
+  ============================================================ -->
+  <section id="testimonials" aria-label="Client testimonials">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="testimonials-header fade-in">
+        <span class="section-tag">Client Stories</span>
+        <h2 class="section-title">What Our Clients <span class="gradient-text">Say</span></h2>
+        <p class="section-subtitle">
+          Don't just take our word for it — hear from the businesses we've
+          helped transform.
+        </p>
+      </div>
+
+      <!-- Testimonials grid -->
+      <div class="testimonials-grid">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Hasan Digital completely transformed our online presence. Our website traffic
+            increased by 240% in just three months, and we saw a 60% jump in leads.
+            Absolutely incredible work."
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #6c63ff, #8b7fff);">
+              S
+            </div>
+            <div>
+              <div class="reviewer-name">Sarah Mitchell</div>
+              <div class="reviewer-role">CEO, GreenLeaf Retail</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "The consulting team helped us identify inefficiencies we didn't even
+            know existed. We cut operational costs by 35% while actually improving
+            customer satisfaction scores."
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #00d4aa, #00a87a);">
+              J
+            </div>
+            <div>
+              <div class="reviewer-name">James Carter</div>
+              <div class="reviewer-role">COO, TechFlow Inc.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "From branding to social media to our new website — Hasan Digital handled
+            everything seamlessly. Our brand now feels premium and our customer
+            trust has skyrocketed."
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #ff6b9d, #ff4d82);">
+              A
+            </div>
+            <div>
+              <div class="reviewer-name">Aisha Nkosi</div>
+              <div class="reviewer-role">Founder, Bloom Wellness</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.testimonials-grid -->
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+    CONTACT SECTION
+  ============================================================ -->
+  <section id="contact" aria-label="Contact us">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: Contact info -->
+        <div class="contact-info">
+          <span class="section-tag fade-in">Get In Touch</span>
+          <h2 class="section-title fade-in">
+            Let's Start a <span class="gradient-text">Conversation</span>
+          </h2>
+          <p class="section-subtitle fade-in">
+            Ready to take your business to the next level? Fill out the form
+            or reach us directly — we respond within 24 hours.
+          </p>
+
+          <!-- Contact detail items -->
+          <div class="contact-info-items fade-in">
+
+            <div class="contact-info-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-info-label">Office Address</div>
+                <div class="contact-info-value">123 Business Ave, Suite 400, New York, NY 10001</div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-info-label">Phone</div>
+                <!-- tel: link makes phone number clickable/callable on mobile -->
+                <div class="contact-info-value">
+                  <a href="tel:+8801790147353" style="color:inherit; text-decoration:none;">+1 (212) 555-0199</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-value">
+                  <a href="mailto:mdhasanurrahmanhasan101@gmail.com Hasan Digital.com" style="color:inherit; text-decoration:none;">mdhasanurrahmanhasan101@gmail.comHasan Digital.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <div class="contact-info-label">Business Hours</div>
+                <div class="contact-info-value">Mon – Fri: 9:00 AM – 6:00 PM EST</div>
+              </div>
+            </div>
+
+          </div><!-- /.contact-info-items -->
+        </div><!-- /.contact-info -->
+
+        <!-- Right: Contact form card -->
+        <div class="contact-form-card fade-in">
+
+          <!-- The actual contact form -->
+          <form id="contact-form" action="https://formsubmit.co/mdhasanurrahmanhasan101@gmail.com" method="POST" novalidate>
+            <!-- novalidate: disables browser's built-in validation so JS handles it -->
+
+            <!-- Row: Name + Email side by side -->
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Jane Smith"
+                  autocomplete="name"
+                  required
+                />
+                <!-- Error message — shown by JS when invalid -->
+                <span class="field-error" id="name-error">Please enter your full name (min. 2 characters).</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane@company.com"
+                  autocomplete="email"
+                  required
+                />
+                <span class="field-error" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+            </div><!-- /.form-row -->
+
+            <!-- Row: Phone + Service side by side -->
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+1 (555) 000-0000"
+                  autocomplete="tel"
+                />
+                <span class="field-error" id="phone-error">Please enter a valid phone number.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Needed *</label>
+                <!-- Dropdown — user selects which service they need -->
+                <select id="service" name="service" required>
+                  <option value="">— Select a service —</option>
+                  <option value="consulting">Business Consulting</option>
+                  <option value="marketing">Digital Marketing</option>
+                  <option value="web">Web Development</option>
+                  <option value="branding">Brand Identity</option>
+                  <option value="analytics">Data & Analytics</option>
+                  <option value="support">Ongoing Support</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+                <span class="field-error" id="service-error">Please select a service.</span>
+              </div>
+
+            </div><!-- /.form-row -->
+
+            <!-- Full-width message textarea -->
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your business and what you're looking to achieve…"
+                required
+              ></textarea>
+              <span class="field-error" id="message-error">Please enter a message (min. 10 characters).</span>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+              Send Message ✉️
+            </button>
+
+          </form><!-- /#contact-form -->
+
+          <!-- Success message — hidden by default, shown by JS after submission -->
+          <div id="form-success">
+            <div class="success-icon">🎉</div>
+            <h3>Message Sent Successfully!</h3>
+            <p>
+              Thank you for reaching out! Our team will review your message
+              and get back to you within 24 hours.
+            </p>
+          </div>
+
+        </div><!-- /.contact-form-card -->
+
+      </div><!-- /.contact-layout -->
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+    FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+
+      <!-- Footer grid: 4 columns on desktop -->
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand + description + social links -->
+        <div class="footer-brand footer-col">
+          <a href="#hero" class="nav-logo" style="text-decoration:none;"> Hasan<span> Digital</span></a>
+          <p>
+            Empowering small and medium businesses with the strategy, technology,
+            and creativity they need to thrive in a competitive world.
+          </p>
+
+          <!-- Social media links -->
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">🐦</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Services links -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Business Consulting</a></li>
+            <li><a href="#services">Digital Marketing</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Brand Identity</a></li>
+            <li><a href="#services">Data & Analytics</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company links -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Careers</a></li>
+            <li><a href="#contact">Blog</a></li>
+            <li><a href="#contact">Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact links -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+8801790147353">+1 (212) 555-0199</a></li>
+            <li><a href="mailto:mdhasanurrahmanhasan101@gmail.comHasan Digital.com">mdhasanurrahmanhasan101@gmail.comHasan Digital.com</a></li>
+            <li><a href="#contact">Get a Free Quote</a></li>
+            <li><a href="#contact">Support</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer-grid -->
+
+      <!-- Footer bottom bar: copyright + legal links -->
+      <div class="footer-bottom">
+        <p>© 2024 Hasan Digital Solutions. All rights reserved.</p>
+        <p>
+          <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+          <a href="#">Terms of Service</a> &nbsp;·&nbsp;
+          <a href="#">Cookie Policy</a>
+        </p>
+      </div>
+
+    </div><!-- /.container -->
+  </footer>
+
+
+  <!-- ============================================================
+    WHATSAPP FLOATING BUTTON
+    Replace YOUR_NUMBER with your actual WhatsApp number:
+    Format: country code + number, no spaces or dashes
+    Example: 8801790147353 for +1 (212) 555-0199
+  ============================================================ -->
+  <a
+    href="https://wa.me/8801790147353?text=Hi%20Hasan Digital%2C%20I%27m%20interested%20in%20your%20services!"
+    id="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <!-- WhatsApp SVG icon — inline so no external file is needed -->
+    <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+
+  <!-- ============================================================
+    SCROLL TO TOP BUTTON
+  ============================================================ -->
+  <button id="scroll-top" aria-label="Scroll to top" title="Scroll to top">
+    ↑
+  </button>
+
+
+  <!-- Our custom JavaScript — loaded at the bottom so HTML is parsed first -->
+  <script src="script.js"></script>
+
+</body>
+</html>
